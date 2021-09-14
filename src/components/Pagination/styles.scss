@@ -1,0 +1,37 @@
+@import '../../styles/theme';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  @include themify() {
+    .arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      background: transparent;
+      color: themed('primary-color');
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .page-number {
+      border: 0;
+      background: transparent;
+      text-align: center;
+      color: themed('text-color');
+      font-size: 18px;
+      font-weight: bold;
+      padding: 4px;
+    }
+
+    .active {
+      color: themed('primary-color');
+    }
+  }
+}

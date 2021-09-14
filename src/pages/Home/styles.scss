@@ -1,0 +1,25 @@
+@import '../../styles/theme';
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+
+    h1 {
+      @include themify() {
+        color: themed('title-color');
+      }
+      font-size: 6rem;
+      font-weight: 700;
+      margin-bottom: 4rem;
+    }
+  }
+}

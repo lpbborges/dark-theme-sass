@@ -1,0 +1,62 @@
+@import '../../styles/theme';
+
+.repo-item {
+  display: flex;
+  align-items: flex-start;
+
+  padding: 1rem 0;
+
+  @include themify() {
+    & + li {
+      border-top: solid 1px themed('border-color');
+    }
+
+    .book-icon-box {
+      margin-right: 1rem;
+    }
+
+    .repo-infos {
+      display: flex;
+      flex-direction: column;
+
+      .fullname {
+        color: themed('primary-color');
+        font-size: 1.1rem;
+        font-weight: bold;
+
+        transition: 0.2s;
+
+        &:hover {
+          filter: brightness(0.8);
+        }
+      }
+
+      .description {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: themed('text-color');
+        margin-top: 0.5rem;
+      }
+
+      .counters {
+        display: flex;
+        align-items: center;
+        margin-top: 0.5rem;
+
+        div {
+          display: flex;
+          align-items: center;
+          color: themed('text-color');
+
+          & + div {
+            margin-left: 1rem;
+          }
+
+          small {
+            margin-left: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}
